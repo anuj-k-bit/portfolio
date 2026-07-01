@@ -144,7 +144,7 @@ export const Contact: React.FC = () => {
                 <IconBrandGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/anuj-kekre"
+                href="https://www.linkedin.com/in/anuj-kekre-676b582b3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3.5 rounded-full border border-white/5 bg-neutral-950/40 text-neutral-400 hover:text-accent-purple hover:border-accent-purple/20 transition-all duration-300"

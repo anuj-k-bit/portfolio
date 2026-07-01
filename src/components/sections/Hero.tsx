@@ -145,7 +145,7 @@ export const Hero: React.FC = () => {
           <IconBrandGithub className="w-6 h-6" />
         </a>
         <a
-          href="https://linkedin.com/in/anuj-kekre"
+          href="https://www.linkedin.com/in/anuj-kekre-676b582b3"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent-purple hover:scale-110 transition-all duration-300"
