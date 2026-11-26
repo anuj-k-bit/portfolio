@@ -5,11 +5,11 @@ import { Mail, ArrowUpRight } from "lucide-react"
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react"
 
 const taglines = [
-  "Computer Science Undergraduate",
-  "Full-Stack Developer",
-  "Security-Focused Builder",
-  "Data-Driven Analyst",
-  "100+ LeetCode Problem Solver",
+  "Final-Year CSE Student",
+  "Builder of LLM Agents",
+  "Python Backend Developer",
+  "Certified AI Practitioner (AWS)",
+  "DSA Problem Solver: 255 Solved",
 ]
 
 export const Hero: React.FC = () => {
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
         className="mb-5 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-accent-cyan/30 bg-accent-cyan/5 text-accent-cyan text-xs font-heading tracking-widest uppercase"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse" />
-        Available for Honeywell Internship
+        Open to Opportunities
       </motion.div>
 
       {/* Name */}

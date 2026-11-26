@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-neutral-400 max-w-2xl mx-auto font-body text-base"
         >
-          Let's connect! Reach out for collaborative projects, Honeywell internship queries, or simply to say hello.
+          Let's connect! Reach out about job opportunities, collaborative projects, or simply to say hello.
         </motion.p>
       </div>
 
@@ -74,7 +74,7 @@ export const Contact: React.FC = () => {
               GET IN TOUCH
             </h3>
             <p className="text-neutral-400 font-body text-sm leading-relaxed mb-6">
-              I am actively looking for internship roles where I can apply my problem-solving skills, full-stack capability, and cybersecurity certifications. Let's discuss how I can add value to your initiatives.
+              I'm a final-year CSE student looking for roles where I can build AI agents, search systems, and Python backends. Let's talk about how I can help your team.
             </p>
 
             <div className="space-y-4">

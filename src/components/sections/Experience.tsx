@@ -8,9 +8,10 @@ interface TimelineItem {
   type: "education" | "certification" | "experience"
   title: string
   subtitle: string
-  date: string
+  date?: string
   issuer?: string
   details?: string
+  highlights?: string[]
   verificationUrl?: string
   verificationCode?: string
   icon: React.ComponentType<{ className?: string }>
@@ -18,6 +19,48 @@ interface TimelineItem {
 }
 
 const timelineData: TimelineItem[] = [
+  {
+    id: 10,
+    type: "experience",
+    title: "Software Engineering and Development Intern",
+    subtitle: "Govt. of Madhya Pradesh and TCS joint venture that runs the state's citizen e-services portal.",
+    date: "May 2026 – Jul 2026",
+    issuer: "MPOnline Limited, Bhopal",
+    highlights: [
+      "Built 7 FastAPI microservices with 26 REST endpoints for orders, inventory, demand forecasting, and pricing.",
+      "Lowered forecast MAE by 9.5% (2.41 to 2.18) through LightGBM feature engineering; served SHAP explanations and drift alerts.",
+      "Designed 4 tool-using agents (supervisor, restock, pricing, ops) with guardrails that cap price changes at ±15% and escalate refunds above $10.",
+    ],
+    icon: Briefcase,
+    glowColor: "rgba(6, 182, 212, 0.15)",
+  },
+  {
+    id: 11,
+    type: "certification",
+    title: "AWS Certified AI Practitioner",
+    subtitle: "Foundational certification covering AI, machine learning, and generative AI concepts and services on AWS.",
+    issuer: "Amazon Web Services",
+    icon: Award,
+    glowColor: "rgba(168, 85, 247, 0.15)",
+  },
+  {
+    id: 12,
+    type: "certification",
+    title: "Agentic AI Certified Foundations Associate",
+    subtitle: "Oracle certification in the foundations of agentic AI.",
+    issuer: "Oracle",
+    icon: Award,
+    glowColor: "rgba(59, 130, 246, 0.15)",
+  },
+  {
+    id: 13,
+    type: "certification",
+    title: "Applied Machine Learning in Python",
+    subtitle: "Course on applying machine learning with Python and Scikit-Learn.",
+    issuer: "University of Michigan",
+    icon: Award,
+    glowColor: "rgba(6, 182, 212, 0.15)",
+  },
   {
     id: 1,
     type: "certification",
@@ -82,8 +125,8 @@ const timelineData: TimelineItem[] = [
     title: "B.Tech in Computer Science and Engineering",
     subtitle: "Vellore Institute of Technology, Bhopal",
     date: "Sep 2023 – Expected May 2027",
-    issuer: "CGPA: 8.16 / 10.0",
-    details: "Core CS Coursework: Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Computer Networks, System Design.",
+    issuer: "CGPA: 8.33 / 10.0",
+    details: "Coursework: Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Computer Networks, Machine Learning, Deep Learning.",
     icon: GraduationCap,
     glowColor: "rgba(6, 182, 212, 0.15)",
   },
@@ -109,7 +152,7 @@ export const Experience: React.FC = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-neutral-400 max-w-2xl mx-auto font-body text-base"
         >
-          My academic milestone at VIT Bhopal combined with professional cybersecurity and cloud observability certifications.
+          My internship at MPOnline, my degree at VIT Bhopal, and certifications in AI, cloud, and cybersecurity.
         </motion.p>
       </div>
 
@@ -147,10 +190,12 @@ export const Experience: React.FC = () => {
                     <span className="text-xs font-heading font-semibold text-accent-cyan tracking-wider uppercase bg-accent-cyan/5 border border-accent-cyan/15 rounded-md px-2.5 py-0.5 w-fit">
                       {item.type}
                     </span>
-                    <span className="text-xs font-heading text-neutral-400 flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {item.date}
-                    </span>
+                    {item.date && (
+                      <span className="text-xs font-heading text-neutral-400 flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {item.date}
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="text-lg md:text-xl font-heading font-bold text-white mb-1 leading-snug">
@@ -166,6 +211,17 @@ export const Experience: React.FC = () => {
                   <p className="text-sm text-neutral-400 font-body leading-relaxed mb-3">
                     {item.subtitle}
                   </p>
+
+                  {item.highlights && (
+                    <ul className="space-y-2.5 mb-3">
+                      {item.highlights.map((point, pIdx) => (
+                        <li key={pIdx} className="text-sm text-neutral-400 font-body flex items-start gap-2 leading-relaxed">
+                          <span className="text-accent-purple font-bold mt-1 text-xs">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
                   {item.details && (
                     <p className="text-xs text-neutral-500 font-body border-t border-white/5 pt-3 leading-relaxed">

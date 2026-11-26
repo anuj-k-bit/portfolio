@@ -2,7 +2,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { GlowingCard, CardHeader, CardTitle, CardContent } from "../ui/Card"
 import { Badge } from "../ui/Badge"
-import { Database, ShieldAlert, Code2, Cpu } from "lucide-react"
+import { Code2, Database, Server, Bot, Search, Brain } from "lucide-react"
 
 interface SkillGroup {
   category: string
@@ -14,32 +14,46 @@ interface SkillGroup {
 
 const skillGroups: SkillGroup[] = [
   {
-    category: "Languages & Data",
-    icon: Database,
+    category: "Languages",
+    icon: Code2,
     glowColor: "rgba(6, 182, 212, 0.15)",
     borderColor: "hover:border-accent-cyan/30",
-    skills: ["C++", "Python", "JavaScript", "Java", "SQL", "TypeScript", "Pandas", "NumPy", "Scikit-Learn", "Data Analysis & Reporting"]
+    skills: ["Python", "C++", "SQL"]
   },
   {
-    category: "Frontend & Backend",
-    icon: Code2,
+    category: "Databases",
+    icon: Database,
     glowColor: "rgba(168, 85, 247, 0.15)",
     borderColor: "hover:border-accent-purple/30",
-    skills: ["React.js", "Vanilla JS (ES Modules)", "Vite", "REST APIs", "HTML5/CSS3", "Supabase (Postgres, Auth, Realtime)", "JSON"]
+    skills: ["MySQL", "SQLite", "NoSQL", "Vector Databases", "Qdrant", "ChromaDB"]
   },
   {
-    category: "Tools & Research",
-    icon: ShieldAlert,
+    category: "Backend & DevOps",
+    icon: Server,
     glowColor: "rgba(59, 130, 246, 0.15)",
     borderColor: "hover:border-accent-blue/30",
-    skills: ["Git/GitHub", "Linux", "VS Code", "Wireshark", "Splunk (SIEM)", "MATLAB", "Excel-based reporting"]
+    skills: ["FastAPI", "Flask", "REST APIs", "Pydantic", "Docker", "Docker Compose", "Pytest", "Git"]
   },
   {
-    category: "Core Computer Science",
-    icon: Cpu,
+    category: "LLMs & Agents",
+    icon: Bot,
     glowColor: "rgba(6, 182, 212, 0.15)",
     borderColor: "hover:border-accent-cyan/30",
-    skills: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "Database Management (DBMS)", "Computer Networks", "System Design"]
+    skills: ["LangGraph", "LangChain", "Prompt Engineering", "NeMo Guardrails", "Portkey", "LangSmith", "Claude Code"]
+  },
+  {
+    category: "Search & RAG",
+    icon: Search,
+    glowColor: "rgba(168, 85, 247, 0.15)",
+    borderColor: "hover:border-accent-purple/30",
+    skills: ["Embeddings", "Semantic Search", "FlashRank Reranking", "Chunking", "Agentic RAG", "RAGAS Evals"]
+  },
+  {
+    category: "ML & Deep Learning",
+    icon: Brain,
+    glowColor: "rgba(59, 130, 246, 0.15)",
+    borderColor: "hover:border-accent-blue/30",
+    skills: ["PyTorch", "TensorFlow", "Scikit-Learn", "LightGBM", "XGBoost", "SHAP", "ANN", "CNN", "RNN/LSTM", "Attention", "Transformers", "NLP"]
   }
 ]
 
@@ -63,7 +77,7 @@ export const Skills: React.FC = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-neutral-400 max-w-2xl mx-auto font-body text-base"
         >
-          A categorized taxonomy of programming languages, frameworks, developer tools, and academic computer science fundamentals.
+          The languages, databases, backend tools, and AI and machine learning stack I build with.
         </motion.p>
       </div>
 

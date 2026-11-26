@@ -20,9 +20,9 @@ const panels: Panel[] = [
     icon: GraduationCap,
     color: "rgba(6, 182, 212, 0.15)", // cyan glow
     content: [
-      "Detail-oriented Computer Science undergraduate (Sep 2023 – Expected May 2027) with a CGPA of 8.16/10.0.",
-      "Acquiring deep foundations in Core Computer Science: Data Structures & Algorithms, Object-Oriented Programming, DBMS, Computer Networks, and System Design.",
-      "Eager to support day-to-day team initiatives and contribute fresh ideas as an intern at Honeywell."
+      "Final-year B.Tech CSE student at VIT Bhopal (Sep 2023 – Expected May 2027) with a CGPA of 8.33/10.0.",
+      "Coursework in Data Structures & Algorithms, Object-Oriented Programming, DBMS, Computer Networks, Machine Learning, and Deep Learning.",
+      "AWS Certified AI Practitioner, with Oracle certifications in Cloud Observability and Agentic AI."
     ]
   },
   {
@@ -32,21 +32,21 @@ const panels: Panel[] = [
     icon: BrainCircuit,
     color: "rgba(168, 85, 247, 0.15)", // purple glow
     content: [
-      "Solved 100+ algorithmic problems on LeetCode, strengthening analytical and structured problem-solving skills.",
-      "Coordinated technical workshops on blockchain and Linux administration for 200+ students as a member of VIT Bhopal's Blockchain and Linux Clubs.",
-      "Skilled at translating complex, messy data into clean, actionable, and structured insights."
+      "Solved 255 DSA problems across LeetCode (175) and GeeksforGeeks (80).",
+      "Led PR for VIT Bhopal's Blockchain, Linux and Startup clubs, reaching 200+ students; Event & Discipline Head of the Fashion Club.",
+      "Measures what I build: RAGAS evaluations, golden test sets, and comparisons against baselines."
     ]
   },
   {
     id: 3,
     title: "As a Builder",
-    subtitle: "Full-Stack & Security Engineer",
+    subtitle: "AI & Python Backend Engineer",
     icon: Terminal,
     color: "rgba(59, 130, 246, 0.15)", // blue glow
     content: [
-      "Hands-on experience in building full-stack and security-focused projects using React, TypeScript, Node.js, and Supabase.",
-      "Engineered real-time collaboration engines and Flask/Pandas ML serving dashboards.",
-      "Secured by industry certifications, including Google Cybersecurity Professional, IBM Cybersecurity Fundamentals, and Oracle Cloud Observability Professional."
+      "Builds LLM agents, semantic search, and evaluation pipelines, and ships them as Python backends with FastAPI, Flask, and Docker.",
+      "Built 7 FastAPI microservices and 4 guardrailed AI agents during my internship at MPOnline Limited.",
+      "Projects span agentic RAG, demand forecasting, computer vision, and real-time industrial recommendations."
     ]
   }
 ]
